@@ -17,13 +17,13 @@ object MinecraftSkinService {
      * 获取玩家头模型渲染图
      */
     fun getHeadRenders(uuid: String)
-        = HttpUtil.get("https://crafatar.com/renders/head/$uuid")
+        = HttpUtil.get("https://crafatar.com/renders/head/$uuid?overlay")
 
     /**
      * 获取玩家皮肤模型渲染图
      */
     fun getBodyRenders(uuid: String)
-        = HttpUtil.get("https://crafatar.com/renders/body/$uuid")
+        = HttpUtil.get("https://crafatar.com/renders/body/$uuid?overlay")
 
     /**
      * 获取玩家皮肤源文件
