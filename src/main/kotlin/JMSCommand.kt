@@ -76,8 +76,17 @@ object JMSCommand : CompositeCommand(
     }
 
     private suspend fun CommandSender.sendImage(data: ByteArray) {
-        data.toExternalResource().use {
-            subject?.sendImage(it)
+        try {
+            if (data.isEmpty()) {
+                subject?.sendMessage("未查询到数据")
+                return
+            }
+
+            data.toExternalResource().use {
+                subject?.sendImage(it)
+            }
+        } catch (e: Throwable) {
+            subject?.sendMessage(String(data))
         }
     }
 }

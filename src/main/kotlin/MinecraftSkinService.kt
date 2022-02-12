@@ -11,7 +11,7 @@ object MinecraftSkinService {
      * 获取头像
      */
     fun getAvatars(uuid: String)
-        = HttpUtil.get("https://crafatar.com/avatars/$uuid")
+        = HttpUtil.get("https://crafatar.com/avatars/$uuid?overlay")
 
     /**
      * 获取玩家头模型渲染图
