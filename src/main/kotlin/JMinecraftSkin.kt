@@ -9,7 +9,7 @@ object JMinecraftSkin : KotlinPlugin(
     JvmPluginDescription(
         id = "top.jie65535.mirai-console-jms-plugin",
         name = "J Minecraft Skin",
-        version = "0.1.1",
+        version = "0.1.2",
     ) {
         author("jie65535")
         info("MC皮肤查询插件")
@@ -19,7 +19,7 @@ object JMinecraftSkin : KotlinPlugin(
     override fun onEnable() {
         JMSPluginData.reload()
         JMSCommand.register()
-        logger.info { "Plugin loaded" }
+        logger.info { "Plugin loaded. https://github.com/jie65535/mirai-console-jcf-plugin" }
     }
 
     override fun onDisable() {
