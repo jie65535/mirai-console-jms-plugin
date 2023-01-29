@@ -29,7 +29,7 @@ object MinecraftSkinService {
      * 获取玩家皮肤源文件
      */
     fun getSkins(uuid: String)
-        = HttpUtil.get("https://crafatar.com/skin/$uuid")
+        = HttpUtil.get("https://crafatar.com/skins/$uuid")
 
     /**
      * 获取玩家皮肤源文件
