@@ -1,10 +1,7 @@
 package top.jie65535
 
 import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.JsonNull
-import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.jsonPrimitive
+import kotlinx.serialization.json.*
 
 /**
  * Minecraft UUID Service
@@ -25,7 +22,7 @@ object MinecraftUuidService {
         val retJson = HttpUtil.get("https://tenapi.cn/v2/mc/?uid=$username").decodeToString()
         val response = Json.decodeFromString<JsonObject>(retJson)
         if (response["code"]!!.jsonPrimitive.content == "200") {
-            val elem = response["id"]!!.jsonPrimitive
+            val elem = response["data"]!!.jsonObject["id"]!!.jsonPrimitive
             if (elem == JsonNull) throw Exception("Player UUID Not Found!")
             uuid = elem.content
         } else {
