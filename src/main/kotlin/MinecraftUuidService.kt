@@ -22,7 +22,7 @@ object MinecraftUuidService {
             return uuid
         }
 
-        val retJson = HttpUtil.get("https://tenapi.cn/mc/?uid=$username").decodeToString()
+        val retJson = HttpUtil.get("https://tenapi.cn/v2/mc/?uid=$username").decodeToString()
         val response = Json.decodeFromString<JsonObject>(retJson)
         if (response["code"]!!.jsonPrimitive.content == "200") {
             val elem = response["id"]!!.jsonPrimitive

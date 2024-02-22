@@ -9,7 +9,7 @@ object JMinecraftSkin : KotlinPlugin(
     JvmPluginDescription(
         id = "top.jie65535.mirai-console-jms-plugin",
         name = "J Minecraft Skin",
-        version = "1.0.0",
+        version = "1.1.0",
     ) {
         author("jie65535")
         info("MC皮肤查询插件")
