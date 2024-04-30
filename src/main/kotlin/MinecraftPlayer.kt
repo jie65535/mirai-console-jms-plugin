@@ -35,5 +35,5 @@ class MinecraftPlayer(username: String) {
     /**
      * 披风文件
      */
-    val cape get() = MinecraftSkinService.getCapes(uuid)
+//    val cape get() = MinecraftSkinService.getCapes(uuid)
 }

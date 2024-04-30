@@ -64,16 +64,16 @@ object JMSCommand : CompositeCommand(
         }
     }
 
-    @SubCommand("cape")
-    @Description("获取玩家披风文件")
-    suspend fun CommandSender.getCape(username: String) {
-        try {
-            sendImage(MinecraftPlayer(username).cape)
-        } catch (e: Throwable) {
-            JMinecraftSkin.logger.error("获取玩家披风文件失败", e)
-            e.message?.let { sendMessage(it) }
-        }
-    }
+//    @SubCommand("cape")
+//    @Description("获取玩家披风文件")
+//    suspend fun CommandSender.getCape(username: String) {
+//        try {
+//            sendImage(MinecraftPlayer(username).cape)
+//        } catch (e: Throwable) {
+//            JMinecraftSkin.logger.error("获取玩家披风文件失败", e)
+//            e.message?.let { sendMessage(it) }
+//        }
+//    }
 
     private suspend fun CommandSender.sendImage(data: ByteArray) {
         try {

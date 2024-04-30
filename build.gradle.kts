@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "top.jie65535.mirai"
-version = "1.1.1"
+version = "1.2.0"
 
 repositories {
     maven("https://maven.aliyun.com/repository/public")
@@ -15,7 +15,6 @@ repositories {
 }
 
 dependencies {
-
     val ktorVersion = "2.3.8"
     implementation("io.ktor:ktor-client-core-jvm:$ktorVersion")
     implementation("io.ktor:ktor-client-okhttp-jvm:$ktorVersion")
